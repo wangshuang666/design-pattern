@@ -10,12 +10,15 @@ public class Singleton3 {
 
     private static Singleton3 singleton ;
 
+
     private Singleton3(){
         if(singleton==null){
             singleton =new Singleton3();
         }
     }
-
+    /**
+     * Singleton2 存在现线程安全问题，所以添加了synchronized
+     */
     public synchronized  static  Singleton3 getInstance(){
         return  new Singleton3();
     }

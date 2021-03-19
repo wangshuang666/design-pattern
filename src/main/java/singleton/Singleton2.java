@@ -10,6 +10,9 @@ public class Singleton2 {
 
     private static Singleton2 singleton ;
 
+    /**
+     * Singleton1 如果不使用该对象浪费内存
+     */
     private Singleton2(){
         if(singleton==null){
             singleton =new Singleton2();

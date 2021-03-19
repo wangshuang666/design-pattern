@@ -5,6 +5,6 @@
 			http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-<bean id="applicationLister" class="SpringObserver.ApplicationLister" ></bean>
+    <bean id="applicationLister" class="SpringObserver.ApplicationLister"></bean>
 
-  </beans>
+</beans>
