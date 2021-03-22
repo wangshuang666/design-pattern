@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 			http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!--必须交给spring管理，才能被观察者通知到容器初始化完成-->
-    <bean id="applicationLister" class="observer.spring.ApplicationLister"></bean>
+    <bean id="benTian" class="factory.spring.BenTian"></bean>
+    <bean id="daZhong" class="factory.spring.DaZhong"></bean>
 
 </beans>
