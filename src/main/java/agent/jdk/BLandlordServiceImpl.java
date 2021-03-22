@@ -1,7 +1,7 @@
 package agent.jdk;
 
 /**
- * 具体被代理类A房东
+ * 具体被代理类B房东
  */
 public class BLandlordServiceImpl implements LandlordService{
     public void rentCollection(String tenantName,String intermediary) {

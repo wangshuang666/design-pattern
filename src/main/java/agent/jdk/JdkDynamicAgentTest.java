@@ -3,9 +3,10 @@ package agent.jdk;
 import java.lang.reflect.Proxy;
 
 /**
- * 1.被代理类必须实现接口
- * 2.代理类实现InvocationHandler接口，并重写invoke方法
- * 3.
+ * 1.被代理的对象必须要实现一个接口，BLandlordServiceImpl
+ * 2.代理需要实现InvocationHandler，中介
+ * 3.代理过程在invoke中实现,中介处理业务的过程
+ * 4.创建代理对象Proxy.newProxyInstance实现，客户端调用
  */
 public class JdkDynamicAgentTest {
     public static void main(String[] args) {
@@ -19,6 +20,6 @@ public class JdkDynamicAgentTest {
                 //代理类
                 new Intermediary(landlord));
 
-        landlordProxy.rentCollection("租客花花","链家中介小王");
+        landlordProxy.rentCollection("租客花花", "链家中介小王");
     }
 }

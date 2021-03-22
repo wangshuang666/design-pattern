@@ -1,7 +1,7 @@
 package agent.jdk;
 
 /**
- * 被代理类房东
+ * 被代理类房东接口
  */
 public interface LandlordService {
     /**
