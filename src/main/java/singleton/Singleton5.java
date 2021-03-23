@@ -20,6 +20,15 @@ public class Singleton5 {
         }
     }
 
+    /**
+     *Singleton4依然存在线程安全问题
+     * 例如：线程a运行到synchronized (Singleton5.class)线程的执行权被线程b抢走，执行完 singleton =new Singleton5();
+     * 当线程b抢到执行权时继续执行synchronized (Singleton5.class)内容，所以singleton =new Singleton5();被执行了两次
+     * 因此在synchronized (Singleton5.class)同步锁里面添加if(singleton==null)判断
+     *
+     *
+     * @return
+     */
     public   static Singleton5 getInstance(){
         return  new Singleton5();
     }

@@ -8,18 +8,20 @@ package singleton;
  */
 public class Singleton2 {
 
-    private static Singleton2 singleton ;
+    private static Singleton2 singleton;
 
     /**
-     * Singleton1 如果不使用该对象浪费内存
+     * Singleton1 如果不使用该对象浪费内存，
+     * 所以不让singleton随着类的加载而创建对象
+     * 而是调用getInstance()的时候在创建对象
      */
-    private Singleton2(){
-        if(singleton==null){
-            singleton =new Singleton2();
+    private Singleton2() {
+        if (singleton == null) {
+            singleton = new Singleton2();
         }
     }
 
-    public static Singleton2 getInstance(){
+    public static Singleton2 getInstance() {
         return new Singleton2();
     }
 
