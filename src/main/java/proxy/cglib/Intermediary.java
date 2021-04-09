@@ -18,6 +18,7 @@ public class Intermediary implements MethodInterceptor {
      * @return
      * @throws Throwable
      */
+    @Override
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         System.out.println("befor");
         Object result = methodProxy.invokeSuper(o, objects);

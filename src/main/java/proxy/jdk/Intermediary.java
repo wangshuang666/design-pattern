@@ -8,10 +8,10 @@ import java.lang.reflect.Method;
  */
 public class Intermediary implements InvocationHandler {
 
-    private Object intermediary;
+    private Object landlordService;
 
-    public Intermediary(Object intermediary) {
-        this.intermediary = intermediary;
+    public Intermediary(Object landlordService) {
+        this.landlordService = landlordService;
     }
 
     /**
@@ -21,9 +21,10 @@ public class Intermediary implements InvocationHandler {
      * @return
      * @throws Throwable
      */
+    @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("befor");
-        Object result = method.invoke(intermediary, args);
+        Object result = method.invoke(landlordService, args);
         System.out.println("after");
         return result;
     }

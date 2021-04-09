@@ -27,7 +27,7 @@
             <artifactId>spring-context</artifactId>
             <version>5.3.4</version>
         </dependency>
-        <!-- aop 依赖 -->
+        <!-- aop 依赖开始 -->
 
         <dependency>
             <groupId>aopalliance</groupId>
@@ -50,7 +50,19 @@
             <artifactId>aspectjweaver</artifactId>
             <version>1.8.14</version>
         </dependency>
+        <!-- aop 依赖 结束-->
 
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.10</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
 </project>

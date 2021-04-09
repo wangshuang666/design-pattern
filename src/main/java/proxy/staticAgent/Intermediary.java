@@ -10,10 +10,11 @@ public class Intermediary implements LandlordService {
        this.landlordService=landlordService;
    }
 
+    @Override
     public void rentCollection(String tenantName, String intermediary) {
-        System.out.println("befor");
-        landlordService.rentCollection(tenantName,intermediary);
-        System.out.println("after");
+            System.out.println("befor");
+            landlordService.rentCollection(tenantName,intermediary);
+            System.out.println("after");
 
     }
 }
